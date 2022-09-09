@@ -10,7 +10,6 @@ import { useMatch } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { logoutAsync } from '../../redux/actions/authActions';
-// import { useRouteMatch } from "react-router-dom";
 
 const rightLink = {
     fontSize: 16,

@@ -13,10 +13,6 @@ import { doc, getDoc } from "firebase/firestore";
 import { DB } from "../firebase/firebaseConfig";
 
 
-// const docRef = doc(DB, "products", "0");
-// const docSnap = await getDoc(docRef);
-
-
 const SliderComponent = () => {
 
     const dispatch = useDispatch();

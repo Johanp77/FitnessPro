@@ -10,27 +10,11 @@
 .login_component {
   color: white;
   width: 100%;
-
   min-height: 100vh;
-  /* background-image: url(https://res.cloudinary.com/dzkollux2/image/upload/v1662164898/Demo-day/degrade_fitnesspro_uv8ddn.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%; */
-
-  /* background: rgb(0,0,0);
-background: linear-gradient(128deg, rgba(0,0,0,1) 0%, rgba(253,29,29,1) 47%, rgba(252,176,69,1) 100%); */
 
 background: rgb(62,62,62);
 background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
 
-/* background: rgb(63,94,251);
-background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(101,89,222,1) 2%, rgba(252,70,107,1) 100%);
-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(101,89,222,1) 2%, rgba(252,70,107,1) 100%); */
-
-  /* height: 100vh; */
-  /* width: 100vw; */
-  
 }
 @media screen and (max-width: 768px) {
   .login_component {
@@ -141,11 +125,6 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(101,89,222,1) 2%,
   
   color: white;
 
-  /* background: rgb(251,127,22);
-  background: linear-gradient(90deg, rgba(251,127,22,1) 0%, rgba(224,137,70,1) 49%, rgba(255,0,0,1) 100%); */
-
-  /* background: rgb(213,190,33);
-  background: linear-gradient(90deg, rgba(213,190,33,1) 0%, rgba(251,127,22,1) 32%, rgb(226, 38, 38) 100%); */
 
   background: rgb(62,62,62);
 background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
@@ -233,19 +212,9 @@ background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, r
   align-items: center;
   flex: 1;
   width: 30rem;
-  /* margin: 1.8rem auto 1.8rem auto; */
-  /* margin-top: 3.1rem; */
+
 }
 
-/* .formLogin_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-     width: 50%; 
-    margin: 0 auto;
-    border: #f55139 1px solid;
-} */
 
 .FacebookIcon{
   filter: grayscale(100%);

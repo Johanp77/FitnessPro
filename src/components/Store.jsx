@@ -7,11 +7,10 @@ import AppAppBar from './global/AppBar';
 
 
 
-// export function ClickableChips() {
+
 const handleClick = () => {
   console.info('You clicked the Chip.');
 };
-// }
 
 const Store = () => {
   return (
@@ -38,7 +37,6 @@ const Store = () => {
 
       <div className={styles.container_products}>
         <div className={styles.product_proteina}>
-          {/* <h3>Proteínas</h3> */}
         </div>
       </div>
 

@@ -3,8 +3,6 @@ import { useDispatch } from 'react-redux'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { loginGoogle } from '../../redux/actions/authActions';
-import GoogleIcon from '@mui/icons-material/Google';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import styles from './AuthStyles.module.css';
 import FormLogin from './forms/FormLogin';
 
