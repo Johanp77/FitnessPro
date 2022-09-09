@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+:root {
+  --main-color: #ebe7d9;
+  --secondary-color: #f55139;
+}
+
+.promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: var(--main-color);
+}
+
+.promo h1 h2 p {
+  color: var(--main-color);
+}
+.title_promo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 25vh;
+}
+@media screen and (max-width: 768px) {
+  .title_promo {
+    font-size: 2rem;
+  }
+}
+
+.btn_index {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0;
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  font-size: 17px;
+  /* border: 1px solid rgb(255, 255, 255); */
+  border: none;
+  padding: 30px 40px;
+  border-radius: 20px;
+  margin: 3rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.btn_index:hover {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+#hero {
+  min-height: 100vh;
+  position: relative;
+}
+
+.video_container {
+  background-color: #000;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #1c1c1d;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+}
+
+.arrow_down {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+  
+}
+
+/* Estilos contenedor 2 */
+
+.container_info_1 {
+  position: absolute;
+  top: 100%;
+  box-sizing: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+}
+.container_info_1 .info_1 h1 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 10vh;
+}
+.container_info_1 .info_1 p {
+  margin: 3rem auto;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 4rem;
+}
+
+/* Efecto hover sobre imágenes contenedor 2 */
+
+.images_container_2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.images_container_2 img{
+  width: 400px;
+}
+
+.images_container_2_img_1{
+  width: 400px;
+  background-image: url("https://res.cloudinary.com/dzkollux2/image/upload/v1654525082/Demo-day/Suplementos-deportivos-Conoce-los-mitos-y-verdades_jdowmb.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.images_container_2_info_1{
+  /* position: absolute;  */
+  overflow: hidden;
+  width: 400px;
+  height: 229px;
+  background-color: rgba(31, 31, 31, 0.9);
+  -webkit-transition: opacity 0.2s;
+  opacity: 0;
+}
+.images_container_2_img_1:hover .images_container_2_info_1{
+  opacity: 1;
+}
+.images_container_2_info_1 .images_container_2_p_1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transition: margin 0.2s;
+}
+.images_container_2_info_1:hover .images_container_2_p_1{
+  margin-top: -100px;
+
+}
+
+
+
+.images_container_2_img_2{
+  width: 400px;
+  background-image: url("https://res.cloudinary.com/dzkollux2/image/upload/v1654525080/Demo-day/suplementos-deportistas-1-k8hD--620x349_abc_xtf9m9.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.images_container_2_info_2{
+  position: absolute;
+  overflow: hidden;
+  width: 400px;
+  height: 229px;
+  background-color: rgba(31, 31, 31, 0.9);
+  -webkit-transition: opacity 0.2s;
+  opacity: 0;
+}
+.images_container_2_img_2:hover .images_container_2_info_2{
+  opacity: 1;
+}
+.images_container_2_info_2 .images_container_2_p_2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transition: margin 0.2s;
+}
+.images_container_2_info_2:hover .images_container_2_p_2{
+  margin-top: -100px;
+}
+
+
+/* Estilos contenedor 3 */
+
+.container_3{
+  position: absolute;
+  top: 200%;
+  box-sizing: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+/* Estilos contenedor 4 */
+
+.container_4{
+  position: absolute;
+  top: 365%;
+  box-sizing: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+}
+@media screen and (max-width: 900px) {
+  .container_4{
+  top: 525%;
+  }
+}

@@ -1,0 +1,108 @@
+/* .slides .slick-prev {
+    left: 3% !important;
+    z-index: 1;
+  }
+.slides .slick-next {
+    right: 3% !important;
+    z-index: 1;
+  } */
+
+.slides .slick-prev,
+.slides .slick-next {
+  background-color: green;
+}
+
+.slides {
+  position: relative;
+}
+
+.slides .slick-prev,
+.slides .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+.slides .slick-prev {
+  left: 5%;
+}
+
+.slides .slick-next {
+  right: 5%;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.title > h1 {
+  font-size: 1.3rem;
+}
+
+/* TODO: transition when the pages load */
+
+.container_categories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.category > div {
+  margin: 0 10vh 0 0;
+}
+
+.container_items {
+  width: 50%;
+  margin: 0 auto;
+  background-color: brown;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_items > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* TODO: Fix size of react cards */
+
+.card {
+  /* width: 100%;
+  height: 100%; */
+  background-color: rgba(235, 232, 232, 0);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .card {
+    animation: card-animation 1.5s ease-in-out;
+  }
+}
+
+@keyframes card-animation {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.card:hover {
+  transform: scale(1.07);
+}

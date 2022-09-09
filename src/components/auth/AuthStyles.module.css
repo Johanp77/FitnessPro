@@ -1,0 +1,252 @@
+:root {
+  --main-color: #ebe7d9;
+  --secondary-color: #f55139;
+}
+
+.main_container{
+  width: 100vw;
+}
+
+.login_component {
+  color: white;
+  width: 100%;
+
+  min-height: 100vh;
+  /* background-image: url(https://res.cloudinary.com/dzkollux2/image/upload/v1662164898/Demo-day/degrade_fitnesspro_uv8ddn.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%; */
+
+  /* background: rgb(0,0,0);
+background: linear-gradient(128deg, rgba(0,0,0,1) 0%, rgba(253,29,29,1) 47%, rgba(252,176,69,1) 100%); */
+
+background: rgb(62,62,62);
+background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
+
+/* background: rgb(63,94,251);
+background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(101,89,222,1) 2%, rgba(252,70,107,1) 100%);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(101,89,222,1) 2%, rgba(252,70,107,1) 100%); */
+
+  /* height: 100vh; */
+  /* width: 100vw; */
+  
+}
+@media screen and (max-width: 768px) {
+  .login_component {
+  background-image: url(https://res.cloudinary.com/dzkollux2/image/upload/v1662083537/Demo-day/b97ba750084b2324383dfc02e54fd1f4_inmzip.jpg);
+    background-repeat: no-repeat;
+    background-size: fill;
+    background-position: center;
+    
+  }
+}
+
+.container_register_login {
+  overflow: auto;
+  background-color: var(--secondary-color);
+  width: 50vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+.container_login {
+  overflow: auto;
+  background-color: var(--secondary-color);
+  width: 50vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2em auto;
+  align-items: center;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+.inputs {
+  margin: 1rem;
+}
+
+.h2_login {
+  text-align: center;
+}
+
+.center_button_login {
+  text-align: center;
+}
+.button_login {
+  background-color: var(--secondary-color);
+  padding: 0.5em 1em;
+  border: none;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.button_login:hover {
+  background-color: #ebe7d9;
+  color: white;
+}
+
+.container_social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+}
+
+.container_social .container_icons > img {
+  width: 50px;
+  height: 50px;
+  margin: 0 1em;
+  cursor: pointer;
+}
+
+.container_icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.container_register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.h1_register {
+  text-align: center;
+  margin-top: 0;
+}
+
+
+
+/* Estilos del componente de registro */
+
+
+.register_container{
+  
+  color: white;
+
+  /* background: rgb(251,127,22);
+  background: linear-gradient(90deg, rgba(251,127,22,1) 0%, rgba(224,137,70,1) 49%, rgba(255,0,0,1) 100%); */
+
+  /* background: rgb(213,190,33);
+  background: linear-gradient(90deg, rgba(213,190,33,1) 0%, rgba(251,127,22,1) 32%, rgb(226, 38, 38) 100%); */
+
+  background: rgb(62,62,62);
+background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
+
+  min-height: 100vh;
+
+}
+
+.container_register{
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 20rem;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 1rem 0;
+}
+
+.container_redirect_login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+}
+
+/* FORMULARIOS */
+
+/* Estilos de el formulario de inicio de sesión */
+
+.formLogin_container {
+  /* color: white; */
+  color: black;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2em auto 0 auto;
+  align-items: center;
+  border: 1px solid #ff7b00c9;
+  border-radius: 7px;
+}
+
+.inputs {
+  margin: 1rem;
+}
+
+.h2_login {
+  text-align: center;
+}
+
+.center_button_login {
+  text-align: center;
+}
+.button_login {
+  background-color: var(--secondary-color);
+  padding: 0.5em 1em;
+  border: none;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.button_login:hover {
+  background-color: #bb3f0e;
+  color: white;
+}
+
+.container_social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 0 auto 1.8rem auto;
+}
+
+.container_register_login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 30rem;
+  /* margin: 1.8rem auto 1.8rem auto; */
+  /* margin-top: 3.1rem; */
+}
+
+/* .formLogin_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     width: 50%; 
+    margin: 0 auto;
+    border: #f55139 1px solid;
+} */
+
+.FacebookIcon{
+  filter: grayscale(100%);
+}

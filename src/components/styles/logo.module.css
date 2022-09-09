@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700;1,900&display=swap');
+
+:root {
+    --main-color: #ebe7d9;
+    --secondary-color: #f55139;
+  }
+
+.diagonal_lines{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: var(--secondary-color);
+    font-style: italic;
+    font-size: 33px;
+    letter-spacing: 3px;
+}
+
+.body_name{
+    color: var(--main-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 37px;
+}
