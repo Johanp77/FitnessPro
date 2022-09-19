@@ -5,12 +5,12 @@ import Link from '@mui/material/Link';
 import Toolbar from '../landing-page/ToolBar';
 import { AppBar, Typography } from '@mui/material';
 import Logo from './Logo';
-import { getAuth } from 'firebase/auth';
 import { useMatch } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { logoutAsync } from '../../redux/actions/authActions';
 import { useState } from 'react';
+import UserMenu from './UserMenu';
 
 const rightLink = {
     fontSize: 16,
@@ -18,7 +18,6 @@ const rightLink = {
     ml: 3,
 };
 
-const auth = getAuth();
 
 function UserUndefined() {
     return (
@@ -27,20 +26,22 @@ function UserUndefined() {
                 color="inherit"
                 variant="h6"
                 underline="none"
-                href="/login"
-
                 sx={rightLink}
+                href="/register"
+
             >
-                {'Sign In'}
+                {'Sign Up'}
             </Link>
             <Link
                 variant="h6"
                 underline="none"
-                href="/register"
+                href="/login"
                 sx={{ ...rightLink, color: '#F55139' }}
             >
-                {'Sign Up'}
+                {'Log In'}
             </Link>
+
+
         </Box>
     )
 }
@@ -54,10 +55,11 @@ function UserLogued() {
 
     return (
         console.log(userData[0].userName),
-        <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
+        <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end', alignItems: "center" }}>
             <Typography variant="p" color="white">
                 Hola {userData[0].userName}</Typography>
-            <button onClick={() => (dispatch(logoutAsync()))}>LogOut</button>
+            <UserMenu userImage={userData[0].photoURL} />
+            {/* <button onClick={() => (dispatch(logoutAsync()))}>LogOut</button> */}
 
         </Box>
     )

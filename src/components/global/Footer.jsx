@@ -7,7 +7,7 @@ const Footer = () => {
     <footer>
       <Box>
         <Container maxWidth="lg" sx={{backgroundColor: '#181717'}}>
-           
+
         </Container>
       </Box>
     </footer>
