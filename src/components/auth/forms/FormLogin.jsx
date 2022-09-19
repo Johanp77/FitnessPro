@@ -38,7 +38,7 @@ const FormLogin = () => {
                         name="email"
                         color="primary" //No funciona
                         root="primary" //No funciona
-                        multilineColor="primary" //No funciona
+                        multilinecolor="primary" //No funciona
                         value={email} onChange={handleInputChange}
                         sx={{ borderRadius: '16px', borderColor: 'primary.main', color: 'primary.main', input: { color: '#f8f8f8' } }}
                     />
