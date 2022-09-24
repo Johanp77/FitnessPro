@@ -98,10 +98,7 @@ const AppAppBar = () => {
                         href=""
                         sx={{ fontSize: 10, }}
                     >
-                        {/* <img src="https://res.cloudinary.com/dzkollux2/image/upload/v1654283930/Demo-day/2022-06-03__19_-removebg-preview_a2mc5e.png" alt="logo" widht="10px" /> */}
                         <Logo />
-
-                        {/* {'FitnessPro'} */}
                     </Link>
                     {userStatus
                         ? <UserLogued />

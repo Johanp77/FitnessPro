@@ -99,10 +99,10 @@ const SliderComponent = () => {
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
-                                            <Button size="small" color="primary">
+                                            <Button size="small" color="secondary">
                                                 Ver más
                                             </Button>
-                                            <Button size="small">Add to cart</Button>
+                                            <Button size="small" color="secondary">Add to cart</Button>
                                         </CardActions>
                                     </Card>
                                     }

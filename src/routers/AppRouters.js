@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Login from '../components/auth/Login';
 import Register from '../components/auth/Register';
 import Index from '../components/landing-page/Index';
-import Store from '../components/Store';
+import Store from '../components/Store/Store';
 import { authStatusChanger } from '../redux/actions/authActions';
 // import Home from '../components/Home';
 // import Register from '../components/auth/Register';

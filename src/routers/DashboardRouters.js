@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Home from '../components/Home';
 import Index from '../components/landing-page/Index';
-import Store from '../components/Store';
+import Store from '../components/Store/Store';
 import UserDetails from '../components/UserDetails';
 
 

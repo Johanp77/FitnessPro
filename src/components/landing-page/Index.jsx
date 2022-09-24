@@ -10,6 +10,7 @@ import ScaleIcon from '@mui/icons-material/Scale';
 import Footer from '../global/Footer';
 import Logo from '../global/Logo';
 import AppAppBar from '../global/AppBar';
+import { Link } from 'react-router-dom';
 
 
 const item = {
@@ -73,7 +74,7 @@ const Index = () => {
                     component="section"
                     sx={{ display: 'flex', overflow: 'hidden', bgcolor: '#d1cfca' }}
                 >
-                    <Container sx={{ mt: 15, mb: 30, display: 'flex', position: 'relative' }}>
+                    <Container sx={{ mt: 5, mb: 10, display: 'flex', position: 'relative' }}>
                         <Box
                             component="img"
                             src="/static/themes/onepirate/productCurvyLines.png"
@@ -166,7 +167,15 @@ const Index = () => {
             </div>
 
             <div className={styles.container_4}>
+                <div className={styles.container_4_promo}>
+                    <Link style={{textDecoration: 'none'}} to="/store">Explora Nuestro Catálogo aquí!</Link>
+                </div>
+                <div className={styles.container_4_infoStore}>
+                    <p>Se te redirigirá a nuestra página de compras, echa un vistazo a nuestras ofertas y promociones, te sorprenderán!</p>
+                </div>
+                <div className={styles.container_4_footer}>
                 <Footer/>
+                </div>
             </div>
         </div>
 
