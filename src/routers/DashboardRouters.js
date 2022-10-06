@@ -11,7 +11,7 @@ const DashboardRouters = () => {
     return (
         <>
             <Routes>
-                <Route path='/' element={<Home />} />
+                <Route path='/' element={<Store />} />
                 {/* <Route path='/navBar' element={<NavBar />} /> */}
                 <Route path="*" element={<Navigate to="/store2" />} />
                 <Route path="/UserDetials" element={<UserDetails />} />

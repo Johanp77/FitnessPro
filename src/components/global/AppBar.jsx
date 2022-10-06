@@ -82,10 +82,10 @@ const AppAppBar = () => {
             setUserStatus(false)
         }
     }, [userData])
-    console.log(userStatus);
+    // console.log(userStatus);
 
 
-    console.log(userData);
+    // console.log(userData);
     return (
         <div>
             <AppBar position="fixed">
@@ -95,7 +95,7 @@ const AppAppBar = () => {
                         variant="h1"
                         underline="none"
                         color="white"
-                        href=""
+                        href="/index"
                         sx={{ fontSize: 10, }}
                     >
                         <Logo />

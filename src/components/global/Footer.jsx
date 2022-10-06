@@ -33,7 +33,7 @@ const Footer = () => {
 
           <Grid container spacing={1} sx={{padding: '2rem 0 2rem 0'}}>
             <Grid item xs={12} sm={12} md={4} lg={4} xl={4} >
-              <Box sx={{ color: 'black', display: 'flex', justifyContent: 'center' }}>
+              <Box sx={{ color: 'black', display: 'flex', justifyContent: 'center', }}>
                 <Logo />
               </Box>
             </Grid>
