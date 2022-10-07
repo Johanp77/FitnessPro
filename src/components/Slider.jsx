@@ -100,9 +100,9 @@ const SliderComponent = () => {
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
-                                            <NavLink to={`/description/${product.id}`} style={{textDecoration: 'none', color: '#f55139'}}  size="small" color="secondary">
+                                            <Link to={`/description/${product.id}` } style={{textDecoration: 'none', color: '#f55139'}}  size="small" color="secondary">
                                                 VER MÁS
-                                            </NavLink>
+                                            </Link>
                                             <Button size="small" color="secondary">Add to cart</Button>
                                         </CardActions>
                                     </Card>

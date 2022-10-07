@@ -47,6 +47,10 @@
     margin: 5rem 2rem 3rem 2rem;
 
 }
+.container_product_description > p{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
 
 .container_button_add_to_cart{
     margin-top: 3rem;

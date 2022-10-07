@@ -8,7 +8,7 @@ import Footer from '../global/Footer';
 
 const ProductDetail = () => {
 
-  let item = 0
+  // let item = 0
   const [detalle, setDetalle] = useState([])
   const [url, setUrl] = useState(0)
   const [images, setImages] = useState()
@@ -18,7 +18,7 @@ const ProductDetail = () => {
   const { up } = useSelector(store => store.firebaseReducers);
 
   useEffect(() => {
-    item = 0;
+    // item = 0;
     console.log('pre forEach', parseInt(params.id, 0));
     up.forEach(producto => {
       producto.products.forEach((producto2 => {
@@ -33,7 +33,7 @@ const ProductDetail = () => {
         }
       }))
     })
-  }, []);
+  }, [params.id, up]);
 
   // useEffect(() => {
   //   console.log(params.id);

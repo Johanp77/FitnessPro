@@ -68,16 +68,16 @@ const AppRouters = () => {
             </PublicRoutes>
             } />
 
-          <Route path='/Store' element=
-            {<PublicRoutes isAuth={isLoggedIn}>
+          <Route path='/Store' element={
+            // {<PublicRoutes isAuth={isLoggedIn}>
               <Store />
-            </PublicRoutes>
+            // {/* </PublicRoutes> */}
             } />
 
-          <Route exact path='/description/:id' element={
-            <PublicRoutes isAuth={isLoggedIn} >
+          <Route exact path='description/:id' element={
+            // <PublicRoutes isAuth={isLoggedIn} >
               <ProductDetail />
-            </PublicRoutes>
+            // {/* </PublicRoutes> */}
           } />
 
           {/* Rutas Privadas */}

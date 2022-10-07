@@ -1,7 +1,6 @@
 import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Home from '../components/Home';
-import Index from '../components/landing-page/Index';
+import ProductDetail from '../components/Store/ProductDetail';
 import Store from '../components/Store/Store';
 import UserDetails from '../components/UserDetails';
 
@@ -15,7 +14,8 @@ const DashboardRouters = () => {
                 {/* <Route path='/navBar' element={<NavBar />} /> */}
                 <Route path="*" element={<Navigate to="/store2" />} />
                 <Route path="/UserDetials" element={<UserDetails />} />
-                <Route path="/store2" element={<Store />} />
+                {/* <Route path="/store2" element={<Store />} /> */}
+                {/* <Route path="description2/:id" element={<ProductDetail />} /> */}
 
             </Routes>
         </>
