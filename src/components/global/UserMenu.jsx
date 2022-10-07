@@ -98,12 +98,14 @@ export default function UserMenu(props) {
             Settings
           </MenuItem>
         </Link>
-        <MenuItem onClick={() => (dispatch(logoutAsync()))}>
+        <Link to="/index" style={{ textDecoration: 'none', color: "black" }}>
+        <MenuItem  onClick={() => (dispatch(logoutAsync()))}>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
           Logout
         </MenuItem>
+        </Link>
       </Menu>
     </React.Fragment>
   );

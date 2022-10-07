@@ -54,7 +54,6 @@ function UserLogued() {
     const { userData } = useSelector(store => store.authReducers);
 
     return (
-        console.log(userData[0].userName),
         <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end', alignItems: "center" }}>
             <Typography variant="p" color="white">
                 Hola {userData[0].userName}</Typography>

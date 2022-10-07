@@ -12,7 +12,7 @@ const DashboardRouters = () => {
             <Routes>
                 <Route path='/' element={<Store />} />
                 {/* <Route path='/navBar' element={<NavBar />} /> */}
-                <Route path="*" element={<Navigate to="/store2" />} />
+                <Route path="*" element={<Navigate to="/store" />} />
                 <Route path="/UserDetials" element={<UserDetails />} />
                 {/* <Route path="/store2" element={<Store />} /> */}
                 {/* <Route path="description2/:id" element={<ProductDetail />} /> */}

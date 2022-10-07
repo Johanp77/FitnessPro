@@ -54,7 +54,7 @@ export const logoutAsync = () => {
             .then((user) => {
                 console.log('Adios')
                 dispatch(logout())
-
+                window.location.href = '/login'
             })
             .catch(error => {
                 console.warn(error)
@@ -86,7 +86,7 @@ export const authStatusChanger = (isAuth) => {
          ]
         auth.onAuthStateChanged(user => {
             if (user) {
-            console.log(user);
+            // console.log(user);
                 userData[0].email = user.email
                 userData[0].userName = user.displayName
                 userData[0].password = user.password
