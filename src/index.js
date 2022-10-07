@@ -6,12 +6,15 @@ import './index.css';
 import { Provider } from 'react-redux';
 import { store } from './redux/store/store';
 import AppRouters from './routers/AppRouters';
-import { createTheme, ThemeProvider  } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
     primary: {
       main: '#ebe7d9',
+    },
+    secondary: {
+      main: '#f55139',
     },
   },
 });

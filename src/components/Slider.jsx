@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { readProteinDocAsync, readProteinsAsync } from "../redux/actions/firebaseActions";
 import { doc, getDoc } from "firebase/firestore";
 import { DB } from "../firebase/firebaseConfig";
+import { Link, NavLink } from "react-router-dom";
 
 
 const SliderComponent = () => {
@@ -24,7 +25,7 @@ const SliderComponent = () => {
         dispatch(readProteinDocAsync())
         const datos = up[0]
         setProductos(datos)
-        console.log(datos);
+        // console.log(datos);
     }, [useSelector, dispatch]);
 
     const settings = {
@@ -99,10 +100,10 @@ const SliderComponent = () => {
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
-                                            <Button size="small" color="primary">
-                                                Ver más
-                                            </Button>
-                                            <Button size="small">Add to cart</Button>
+                                            <Link to={`/description/${product.id}` } style={{textDecoration: 'none', color: '#f55139'}}  size="small" color="secondary">
+                                                VER MÁS
+                                            </Link>
+                                            <Button size="small" color="secondary">Add to cart</Button>
                                         </CardActions>
                                     </Card>
                                     }

@@ -20,12 +20,15 @@
 .title_promo {
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
   margin-top: 25vh;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 830px) {
   .title_promo {
     font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -34,12 +37,12 @@
   letter-spacing: 0;
   background-color: var(--secondary-color);
   color: var(--main-color);
-  font-size: 17px;
+  font-size: 0.9rem;
   /* border: 1px solid rgb(255, 255, 255); */
   border: none;
-  padding: 30px 40px;
+  padding: 1.7rem 2.2rem;
   border-radius: 20px;
-  margin: 3rem;
+  margin: 2.8rem;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -103,16 +106,16 @@ video {
 .container_info_1 .info_1 h1 {
   margin: 0 auto;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   margin-top: 10vh;
 }
 .container_info_1 .info_1 p {
   margin: 3rem auto;
   text-align: center;
-  font-size: 1.3rem;
-  margin-bottom: 4rem;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
 }
 
 /* Efecto hover sobre imágenes contenedor 2 */
@@ -223,5 +226,42 @@ video {
 @media screen and (max-width: 900px) {
   .container_4{
   top: 525%;
+
   }
+}
+
+.container_4_promo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10vh;
+  border-width: 0.2rem;
+  border-style: solid;
+  padding: 2rem;
+  margin: 3rem auto 0 auto;
+  width: 80%;
+}
+.container_4_promo > a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transition: margin 0.2s;
+}
+
+.container_4_infoStore{
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto 0 auto;
+  width: 90%;
+}
+
+.container_4_footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

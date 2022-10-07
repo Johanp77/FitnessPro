@@ -39,7 +39,7 @@ export default function UserMenu(props) {
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar sx={{ width: 32, height: 32 }} src={props.userImage} />
+            <Avatar sx={{ width: 32, height: 32 }} src={props.userImage} referrerPolicy="no-referrer"/>
           </IconButton>
         </Tooltip>
       </Box>
@@ -78,9 +78,11 @@ export default function UserMenu(props) {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
+        <Link to="/UserDetials" style={{ textDecoration: 'none', color: "black" }}>
         <MenuItem>
-          <Avatar src={props.userImage}  /> Mi cuenta
+          <Avatar src={props.userImage} referrerPolicy="no-referrer"  /> Mi cuenta
         </MenuItem>
+        </Link>
         <Divider />
         <MenuItem>
           <ListItemIcon>
@@ -96,12 +98,14 @@ export default function UserMenu(props) {
             Settings
           </MenuItem>
         </Link>
-        <MenuItem onClick={() => (dispatch(logoutAsync()))}>
+        <Link to="/index" style={{ textDecoration: 'none', color: "black" }}>
+        <MenuItem  onClick={() => (dispatch(logoutAsync()))}>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
           Logout
         </MenuItem>
+        </Link>
       </Menu>
     </React.Fragment>
   );

@@ -1,9 +1,10 @@
 import React from 'react'
-import styles from './styles/store.module.css'
+import styles from  '../styles/store.module.css'
 import Chip from '@mui/material/Chip';
-import SliderComponent from './Slider';
-import Slider2 from './Slider2';
-import AppAppBar from './global/AppBar';
+
+import AppAppBar from '../global/AppBar';
+import Footer from '../global/Footer';
+import SliderComponent from '../Slider';
 
 
 
@@ -41,8 +42,13 @@ const Store = () => {
       </div>
 
       <SliderComponent  />
-      <Slider2 />
+      {/* reparar la importación */}
+      {/* <Slider2 /> */}
       
+      <br/>
+      <div>
+        <Footer />
+      </div>
     </div>
 
 

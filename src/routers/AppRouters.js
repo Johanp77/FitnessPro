@@ -5,7 +5,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Login from '../components/auth/Login';
 import Register from '../components/auth/Register';
 import Index from '../components/landing-page/Index';
-import Store from '../components/Store';
+import ProductDetail from '../components/Store/ProductDetail';
+import Store from '../components/Store/Store';
 import { authStatusChanger } from '../redux/actions/authActions';
 // import Home from '../components/Home';
 // import Register from '../components/auth/Register';
@@ -49,9 +50,9 @@ const AppRouters = () => {
         <Routes>
           {/* Rutas Publicas */}
           <Route path='/index' element={
-            <PublicRoutes isAuth={isLoggedIn}>
+            // <PublicRoutes isAuth={isLoggedIn}>
               <Index />
-            </PublicRoutes>
+            // {/* </PublicRoutes> */}
           }
           />
 
@@ -67,11 +68,17 @@ const AppRouters = () => {
             </PublicRoutes>
             } />
 
-<Route path='/Store' element=
-            {<PublicRoutes isAuth={isLoggedIn}>
+          <Route path='/Store' element={
+            // {<PublicRoutes isAuth={isLoggedIn}>
               <Store />
-            </PublicRoutes>
+            // {/* </PublicRoutes> */}
             } />
+
+          <Route exact path='description/:id' element={
+            // <PublicRoutes isAuth={isLoggedIn} >
+              <ProductDetail />
+            // {/* </PublicRoutes> */}
+          } />
 
           {/* Rutas Privadas */}
           <Route path='/*' element={

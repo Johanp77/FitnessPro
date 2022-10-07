@@ -54,7 +54,6 @@ function UserLogued() {
     const { userData } = useSelector(store => store.authReducers);
 
     return (
-        console.log(userData[0].userName),
         <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end', alignItems: "center" }}>
             <Typography variant="p" color="white">
                 Hola {userData[0].userName}</Typography>
@@ -82,10 +81,10 @@ const AppAppBar = () => {
             setUserStatus(false)
         }
     }, [userData])
-    console.log(userStatus);
+    // console.log(userStatus);
 
 
-    console.log(userData);
+    // console.log(userData);
     return (
         <div>
             <AppBar position="fixed">
@@ -95,13 +94,10 @@ const AppAppBar = () => {
                         variant="h1"
                         underline="none"
                         color="white"
-                        href=""
+                        href="/index"
                         sx={{ fontSize: 10, }}
                     >
-                        {/* <img src="https://res.cloudinary.com/dzkollux2/image/upload/v1654283930/Demo-day/2022-06-03__19_-removebg-preview_a2mc5e.png" alt="logo" widht="10px" /> */}
                         <Logo />
-
-                        {/* {'FitnessPro'} */}
                     </Link>
                     {userStatus
                         ? <UserLogued />
