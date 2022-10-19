@@ -11,6 +11,7 @@ import { useEffect } from 'react';
 import { logoutAsync } from '../../redux/actions/authActions';
 import { useState } from 'react';
 import UserMenu from './UserMenu';
+import Cart from './Cart';
 
 const rightLink = {
     fontSize: 16,
@@ -103,11 +104,11 @@ const AppAppBar = () => {
                         ? <UserLogued />
                         : <UserUndefined />
                     }
-                    <Box>
+                    <Box sx={{display: 'flex', alignItems: 'center'}}>
                         {/* {
                         UserLogued()
                         } */}
-
+                    <Cart />
                     </Box>
                 </Toolbar>
             </AppBar>
