@@ -12,6 +12,7 @@ import { readProteinDocAsync, readProteinsAsync } from "../redux/actions/firebas
 import { doc, getDoc } from "firebase/firestore";
 import { DB } from "../firebase/firebaseConfig";
 import { Link, NavLink } from "react-router-dom";
+import { addElement } from "../redux/actions/storeActions";
 
 
 const SliderComponent = () => {
@@ -21,6 +22,8 @@ const SliderComponent = () => {
 
 
     const { up } = useSelector(store => store.firebaseReducers);
+    const { store } = useSelector(store => store.storeReducers.dataStore);
+
     useEffect(() => {
         dispatch(readProteinDocAsync())
         const datos = up[0]
@@ -103,7 +106,7 @@ const SliderComponent = () => {
                                             <Link to={`/description/${product.id}` } style={{textDecoration: 'none', color: '#f55139'}}  size="small" color="secondary">
                                                 VER MÁS
                                             </Link>
-                                            <Button size="small" color="secondary">Add to cart</Button>
+                                            <Button id={product.id} onClick={() => ( console.log(store), dispatch(addElement(product, product.id)) ) } size="small" color="secondary">Add to cart</Button>
                                         </CardActions>
                                     </Card>
                                     }

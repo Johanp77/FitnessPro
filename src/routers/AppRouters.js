@@ -49,7 +49,7 @@ const AppRouters = () => {
       <BrowserRouter>
         <Routes>
           {/* Rutas Publicas */}
-          <Route path='/index' element={
+          <Route path='/' element={
             // <PublicRoutes isAuth={isLoggedIn}>
               <Index />
             // {/* </PublicRoutes> */}

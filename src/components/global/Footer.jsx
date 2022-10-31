@@ -27,7 +27,7 @@ const Root = styled('div')(({ theme }) => ({
 const Footer = () => {
   return (
     <footer>
-      <Box>
+      <Box sx={{position : 'static'}}>
         <Container maxWidth="auto" sx={{ backgroundColor: '#181717' }}>
           {/* <Root> */}
 
