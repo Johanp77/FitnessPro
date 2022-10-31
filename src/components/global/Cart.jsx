@@ -23,7 +23,7 @@ const Cart = () => {
 
   return (
     <div>
-      <ShoppingCartIcon sx={{color: 'white'}} aria-describedby={id} variant="contained" onClick={handleClick}/>
+      <ShoppingCartIcon sx={{color: 'white', ml: '3'}} aria-describedby={id} variant="contained" onClick={handleClick}/>
         
       
       <Popover

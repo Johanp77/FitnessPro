@@ -93,7 +93,7 @@ export const authStatusChanger = (isAuth) => {
                 userData[0].uid = user.uid
                 userData[0].photoURL = user.photoURL
                 userData[0].isAuth = true
-            console.log(userData);
+            // console.log(userData);
             dispatch(authStatus(userData))
             
             } else {

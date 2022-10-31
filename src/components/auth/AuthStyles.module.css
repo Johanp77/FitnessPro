@@ -5,18 +5,20 @@
 
 .main_container{
   width: 100vw;
+  min-width: 100%;
+  min-height: 102vh;
 }
 
 .login_component {
   color: white;
   width: 100%;
-  min-height: 100vh;
+  min-height: 102vh;
 
 background: rgb(62,62,62);
 background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
 
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .login_component {
   background-image: url(https://res.cloudinary.com/dzkollux2/image/upload/v1662083537/Demo-day/b97ba750084b2324383dfc02e54fd1f4_inmzip.jpg);
     background-repeat: no-repeat;
@@ -24,12 +26,11 @@ background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, r
     background-position: center;
     
   }
-}
+} */
 
 .container_register_login {
   overflow: auto;
   background-color: var(--secondary-color);
-  width: 50vh;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -122,14 +123,10 @@ background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, r
 
 
 .register_container{
-  
   color: white;
-
-
   background: rgb(62,62,62);
-background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
-
-  min-height: 100vh;
+  background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
+  min-height: 102vh;
 
 }
 
@@ -147,6 +144,10 @@ background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, r
   align-items: center;
   flex: 1;
   flex-direction: column;
+}
+
+.container_footer_register{
+  position: static;
 }
 
 /* FORMULARIOS */

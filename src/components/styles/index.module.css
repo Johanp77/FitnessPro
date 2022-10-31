@@ -18,6 +18,7 @@
   color: var(--main-color);
 }
 .title_promo {
+  text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 0.3rem;
@@ -124,23 +125,39 @@ video {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+
+}
+@media screen and (max-width: 830px) {
+  .images_container_2 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .images_container_2 > div > img{
+    margin: 1rem 2rem;
+  }
 }
 
-.images_container_2 img{
-  width: 400px;
+.images_container_2_img_1 {
+  display: flex;
 }
 
-.images_container_2_img_1{
-  width: 400px;
-  background-image: url("https://res.cloudinary.com/dzkollux2/image/upload/v1654525082/Demo-day/Suplementos-deportivos-Conoce-los-mitos-y-verdades_jdowmb.png");
+
+.images_container_2_img_1 > img{
+  width: 25rem;
+  border-radius: 3px;
+
+  /* background-image: url("https://res.cloudinary.com/dzkollux2/image/upload/v1654525082/Demo-day/Suplementos-deportivos-Conoce-los-mitos-y-verdades_jdowmb.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
+
+/* 
 .images_container_2_info_1{
-  /* position: absolute;  */
+  position: absolute; 
   overflow: hidden;
-  width: 400px;
+  width: 30rem;
   height: 229px;
   background-color: rgba(31, 31, 31, 0.9);
   -webkit-transition: opacity 0.2s;
@@ -163,21 +180,24 @@ video {
 .images_container_2_info_1:hover .images_container_2_p_1{
   margin-top: -100px;
 
+} */
+
+.images_container_2_img_2 {
+  display: flex;
 }
 
-
-
-.images_container_2_img_2{
-  width: 400px;
-  background-image: url("https://res.cloudinary.com/dzkollux2/image/upload/v1654525080/Demo-day/suplementos-deportistas-1-k8hD--620x349_abc_xtf9m9.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.images_container_2_img_2 > img{
+  width: 25rem;
+  height: 13rem;
+  border-radius: 3px;
+  /* background-image: url("https://res.cloudinary.com/dzkollux2/image/upload/v1654525080/Demo-day/suplementos-deportistas-1-k8hD--620x349_abc_xtf9m9.jpg");
+ */
 }
+/* 
 .images_container_2_info_2{
   position: absolute;
   overflow: hidden;
-  width: 400px;
+  width: 30rem;
   height: 229px;
   background-color: rgba(31, 31, 31, 0.9);
   -webkit-transition: opacity 0.2s;
@@ -199,7 +219,7 @@ video {
 }
 .images_container_2_info_2:hover .images_container_2_p_2{
   margin-top: -100px;
-}
+} */
 
 
 /* Estilos contenedor 3 */
@@ -217,15 +237,15 @@ video {
 
 .container_4{
   position: absolute;
-  top: 365%;
+  top: 127rem;
   box-sizing: inherit;
   width: 100%;
   height: 100%;
   background-color: var(--main-color);
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1008px) {
   .container_4{
-  top: 525%;
+  top: 380%;
 
   }
 }

@@ -20,3 +20,6 @@ export const store = createStore(
         applyMiddleware(thunk)
     )
     );
+    store.subscribe(() => {
+        // persist your state
+      })

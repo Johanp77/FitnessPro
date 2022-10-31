@@ -18,7 +18,7 @@ export const storeReducers = (state = initialState, action) => {
         case storeTypes.updateElement:
             return state.map(element => element.id === action.payload.id ? action.payload : element)
         case storeTypes.deleteAllElements:
-            return []
+            return state = []
         default:
             return state
     }
