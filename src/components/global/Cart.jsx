@@ -2,6 +2,7 @@ import React from 'react'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useDispatch } from 'react-redux';
 import { Button, Popover, Typography } from '@mui/material';
+import { deleteAllElements } from '../../redux/actions/storeActions';
 
 
 
@@ -37,7 +38,7 @@ const Cart = () => {
         }}
       >
         <Typography sx={{ p: 2 }}>Carrito de compras</Typography>
-
+        <button onClick={deleteAllElements}>Vaciar carrito</button>
         
       </Popover>
     </div>

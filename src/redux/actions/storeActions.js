@@ -1,52 +1,47 @@
-import { useSelector } from "react-redux";
+import { Alert } from "@mui/material";
+import React from "react";
+import { useSelector, useStore } from "react-redux";
+import { AlertSucessfullAddToCart } from "../../components/Alerts";
 import { storeTypes } from "../types/storeTypes";
+import ReactDOM from 'react-dom/client';
 
 
 
+let newProduct = []
 
 export const addElement = (product, idProduct) => {
 
-	
-    
+    newProduct = JSON.parse(localStorage.getItem('dataCarrito'))
+
+    // if (!localStorage.getItem('dataCarrito')) {
+    //     newProduct = JSON.parse(localStorage.setItem('dataCarrito', JSON.stringify(newProduct)))
+    // }
+    // else {
+    //     newProduct = JSON.parse(localStorage.getItem('dataCarrito'))
+    // }
+
     return (dispatch) => {
         console.log(product);
-        const newProduct = []
         // if (product) {
-            // console.log("Element already exists")
-            const newProductObject = {
-                id: product.id,
-                name: product.name,
-                price: product.price,
+        // console.log("Element already exists")
+        const newProductObject = {
+            id: product.id,
+            name: product.name,
+            price: product.price,
+        }
+        // console.log(newProductObject);
+        newProduct.push(newProductObject)
+        // console.log(newProduct);
 
-            }
-            newProduct.push(newProductObject)
-
-            const dataCarrito = JSON.parse(localStorage.getItem('dataCarrito'))
-            if(newProductObject){
-                localStorage.setItem('dataCarrito', JSON.stringify(newProduct))
-            }
-            console.log(newProduct);
-            // const dataCarrito = JSON.parse(localStorage.setItem('dataCarrito', JSON.stringify(newProduct)))
-            // if (product) {
-            //     localStorage.setItem('dataCarrito', JSON.stringify(.concat(newProductObject)))
-            // } else {
-            //     localStorage.setItem('dataCarrito', JSON.stringify(newProductObject))
-            // }
-
-
-            // if (dataCarrito) {
-            //     dataCarrito.map((product) => {
-            //         if (product.id === idProduct) {
-            //             product.quantity += 1
-            //         }
-            //         newProduct.push(product)
-            //     })
-            //     localStorage.setItem('dataCarrito', JSON.stringify(newProduct))
-            // }
-            // const pushNewLocalStorage = localStorage.setItem("product", JSON.stringify(newProductObject))
-            // newProduct.push(newProductObject)
-            dispatch(asyncAddElement(newProductObject))
-        // }
+        if (newProductObject) {
+            localStorage.setItem('dataCarrito', JSON.stringify(newProduct))
+            // const root = ReactDOM.createRoot(
+            //     document.getElementById('storeComponent')
+            // );
+            // const element = <AlertSucessfullAddToCart />
+            // root.render(element)
+        }
+        dispatch(asyncAddElement(newProduct))
 
     }
 
@@ -63,11 +58,18 @@ export const asyncAddElement = (newProduct) => {
 export const readAllElements = () => {
     return (dispatch) => {
         // dispatch(asyncReadAllElements())
-
     }
 }
 
-export const deleteElement = (id) => {
+export const deleteAllElements = () => {
+    // localStorage.removeItem('dataCarrito')
+
+    // newProduct = JSON.parse(localStorage.setItem('dataCarrito', JSON.stringify(newProduct)))
+    newProduct.length = 0
+    localStorage.setItem('dataCarrito', JSON.stringify(newProduct))
+}
+
+export const asyncDeleteElement = (id) => {
     return {
         type: storeTypes.deleteElement,
         payload: id

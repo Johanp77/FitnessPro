@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from  '../styles/store.module.css'
 import Chip from '@mui/material/Chip';
 
 import AppAppBar from '../global/AppBar';
 import Footer from '../global/Footer';
 import SliderComponent from '../Slider';
+import { AlertSucessfullAddToCart, AlertWarningAddToCart } from '../Alerts';
 
 
 
@@ -14,8 +15,19 @@ const handleClick = () => {
 };
 
 const Store = () => {
+
+  const [buttonClicked, setButtonClicked] = useState(false);
+
+const handleButtonClick = () => {
+      setButtonClicked(true)
+      console.log('button clicked')
+  }
+
+
+  const [pulsado, setPulsado] = useState(false);
+  
   return (
-    <div>
+    <div id='storeComponent'>
 
       <div>
         <AppAppBar />
@@ -42,9 +54,27 @@ const Store = () => {
       </div>
 
       <SliderComponent  />
-      {/* reparar la importación */}
+      {/*TODO: reparar la importación */}
       {/* <Slider2 /> */}
-      
+      <div id="alert1">
+        {/* <button onClick={() => <AlertWarningAddToCart handleClick={true} />}> hola</button> */}
+        <button onClick={handleButtonClick}> hola</button>
+        {
+          buttonClicked ? <AlertSucessfullAddToCart handleClick={true} /> : null
+        }
+        {/* <button
+        Style=" margin: 20px"
+        onClick = {() => setPulsado(!pulsado)}
+        >
+          Agendar Hora a Paciente
+      </button>
+      {pulsado ? (
+        <AlertSucessfullAddToCart />
+      ) : (
+        <AlertSucessfullAddToCart />
+
+      )} */}
+      </div>
       <br/>
       <div>
         <Footer />
