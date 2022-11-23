@@ -106,7 +106,7 @@ const SliderComponent = () => {
                       <Link to={`/description/${product.id}`} style={{ textDecoration: 'none', color: '#f55139' }} size="small" color="secondary">
                         VER MÁS
                       </Link>
-                      <Button id={product.id} onClick={() => (console.log(product), dispatch(addElement(product, product.id)))} size="small" color="secondary">Add to cart</Button>
+                      <Button id={product.id} onClick={() => (dispatch(addElement(product, product.id)))} size="small" color="secondary">Add to cart</Button>
                     </CardActions>
                   </Card>
                   }

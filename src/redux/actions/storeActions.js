@@ -21,7 +21,7 @@ export const addElement = (product, idProduct) => {
     // }
 
     return (dispatch) => {
-        console.log(product);
+        // console.log(product);
         // if (product) {
         // console.log("Element already exists")
         const newProductObject = {
