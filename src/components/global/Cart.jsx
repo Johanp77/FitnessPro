@@ -39,33 +39,37 @@ const Cart = () => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-          Carrito de compras
+            Carrito de compras
           </Typography>
           {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
           </Typography> */}
-        <div>
-          {/* <Typography sx={{ p: 2 }}>Carrito de compras</Typography> */}
-          {
-            
-            newProduct == null || newProduct.length === 0?
-              <h2>No tienes productos en el carrito </h2>
-              :
-              <div>
-                {newProduct.map((newProduct2, index45) => {
-                  return (
-                    <div key={newProduct2.id}>
-                      <p>{newProduct2.name}</p>
-                      <p>{newProduct2.price}</p>
-                    </div>
-                  )
-                })
-                }
-              </div>
-          }
-       <button onClick={deleteAllElements}>Vaciar carrito</button>
+          <div>
+            {/* <Typography sx={{ p: 2 }}>Carrito de compras</Typography> */}
+            {
 
-        </div>
+              newProduct == null || newProduct.length === 0 ?
+                <h2>No tienes productos en el carrito </h2>
+                :
+                <div>
+                  {newProduct.map((newProduct2, index45) => {
+                    return (
+                      <div key={newProduct2.id}>
+                        <p>{newProduct2.name}</p>
+                        <p>{newProduct2.price}</p>
+                      </div>
+                    )
+                  })
+                  }
+                </div>
+            }
+            <button
+              onClick={ () =>(deleteAllElements(), handleClose()) }
+              onClose={handleClose}
+            >
+              Vaciar carrito</button>
+
+          </div>
         </Box>
 
       </Modal>
