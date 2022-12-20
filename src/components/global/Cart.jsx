@@ -47,7 +47,8 @@ const Cart = () => {
         <div>
           {/* <Typography sx={{ p: 2 }}>Carrito de compras</Typography> */}
           {
-            newProduct.length <= 0 ?
+            
+            newProduct == null || newProduct.length === 0?
               <h2>No tienes productos en el carrito </h2>
               :
               <div>

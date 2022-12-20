@@ -9,16 +9,25 @@ import ReactDOM from 'react-dom/client';
 
 let newProduct = []
 
+console.log(newProduct)
+
 export const addElement = (product, idProduct) => {
 
-    newProduct = JSON.parse(localStorage.getItem('dataCarrito'))
+    // newProduct = JSON.parse(localStorage.getItem('dataCarrito'))
 
-    // if (!localStorage.getItem('dataCarrito')) {
-    //     newProduct = JSON.parse(localStorage.setItem('dataCarrito', JSON.stringify(newProduct)))
-    // }
-    // else {
-    //     newProduct = JSON.parse(localStorage.getItem('dataCarrito'))
-    // }
+    // console.log(product)
+
+    if (localStorage.getItem('dataCarrito') === null) {
+        newProduct = JSON.parse(localStorage.setItem('dataCarrito', JSON.stringify(newProduct)))
+        console.log("nothing to see here");
+    }
+    else {
+        newProduct = JSON.parse(localStorage.getItem('dataCarrito'))
+        console.log("we have an else here")
+    }
+
+    console.log(newProduct)
+
 
     return (dispatch) => {
         // console.log(product);
@@ -34,6 +43,8 @@ export const addElement = (product, idProduct) => {
         // console.log(newProduct);
 
         if (newProductObject) {
+        // console.log(newProductObject);
+
             localStorage.setItem('dataCarrito', JSON.stringify(newProduct))
             // const root = ReactDOM.createRoot(
             //     document.getElementById('storeComponent')
