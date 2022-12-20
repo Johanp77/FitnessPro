@@ -6,6 +6,7 @@ import { loginGoogle } from '../../redux/actions/authActions';
 import styles from './AuthStyles.module.css';
 import FormLogin from './forms/FormLogin';
 import Footer from '../global/Footer';
+import AppAppBar from '../global/AppBar';
 
 
 
@@ -23,8 +24,11 @@ const P = styled.p`
 const Login = () => {
     const dispatch = useDispatch()
     return (
-        <div>
+        <div className={styles.inyected_login_container}>
             <div className={styles.main_container}>
+                <div className={styles.nav_container}>
+                    <AppAppBar />
+                </div>
                 <div className={styles.login_component}>
                     <div className={styles.undefined}>
                         <H1>FitnessPro te da la bienvenida!</H1>
@@ -50,7 +54,9 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <div className={styles.container_login_footer}>
+                <Footer />
+            </div>
         </div>
     )
 }

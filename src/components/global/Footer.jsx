@@ -1,9 +1,9 @@
-import { Box, Container, Grid, styled, Typography } from '@mui/material'
+import { Box, Container, Grid, Link, styled, Typography } from '@mui/material'
 import React from 'react'
 import Logo from './Logo'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 
@@ -27,24 +27,31 @@ const Root = styled('div')(({ theme }) => ({
 const Footer = () => {
   return (
     <footer>
-      <Box sx={{position : 'static'}}>
+      <Box sx={{ position: 'static' }}>
         <Container maxWidth="auto" sx={{ backgroundColor: '#181717' }}>
           {/* <Root> */}
 
-          <Grid container spacing={1} sx={{padding: '2rem 0 2rem 0'}}>
+          <Grid container spacing={1} sx={{ padding: '2rem 0 2rem 0' }}>
             <Grid item xs={12} sm={12} md={4} lg={4} xl={4} >
               <Box sx={{ color: 'black', display: 'flex', justifyContent: 'center', }}>
-                <Logo />
+                <Link
+                  // variant="h1"
+                  underline="none"
+                  color="white"
+                  href="/"
+                >
+                  <Logo />
+                </Link>
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
               <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-              <Typography variant="p" color="white" >
-                ©2022 FitnessPro.
-              </Typography>
-              <Typography variant="p" color="white" sx={{ fontStyle: 'light ' }}>
-                Proyecto construido con React.js.
-              </Typography>
+                <Typography variant="p" color="white" >
+                  ©2022 FitnessPro.
+                </Typography>
+                <Typography variant="p" color="white" sx={{ fontStyle: 'light ' }}>
+                  Proyecto construido con React.js.
+                </Typography>
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>

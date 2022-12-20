@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import AppAppBar from '../global/AppBar';
 import styles from '../styles/productDetail.module.css'
 import SliderProductDetail from './SliderProductDetail';
 import Footer from '../global/Footer';
+import { addElement } from '../../redux/actions/storeActions';
 
 const ProductDetail = () => {
 
   // let item = 0
+  const dispatch = useDispatch();
   const [detalle, setDetalle] = useState([])
   const [url, setUrl] = useState(0)
   const [images, setImages] = useState()
@@ -83,7 +85,9 @@ const ProductDetail = () => {
               <p>Precio: ${detalle.price}</p>
               <p>Peso: {detalle.size}</p>
               <div className={styles.container_button_add_to_cart}>
-                <button className={styles.button_add_to_cart}>
+                <button className={styles.button_add_to_cart}
+                onClick={() => (dispatch(addElement(detalle, detalle.id)))}
+                >
                   Agregar al carrito
                 </button>
               </div>

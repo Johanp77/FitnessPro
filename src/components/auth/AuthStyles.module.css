@@ -3,20 +3,32 @@
   --secondary-color: #f55139;
 }
 
-.main_container{
-  width: 100vw;
-  min-width: 100%;
-  min-height: 102vh;
+.inyected_login_container {
+  /* min-height: 100vh; */
+  background: rgb(62, 62, 62);
+  background: linear-gradient(
+    128deg,
+    rgba(62, 62, 62, 1) 0%,
+    rgba(253, 29, 29, 1) 0%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+.main_container {
+  /* width: 100vw; */
+  /* min-width: 100%; */
+  min-height: 100vh;
+/* background: rgb(62,62,62); */
+/* background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%); */
 }
 
 .login_component {
   color: white;
-  width: 100%;
-  min-height: 102vh;
+  /* width: 100%;
+  min-height: 100vh; */
 
-background: rgb(62,62,62);
-background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
-
+  /* background: rgb(62,62,62); */
+  /* background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%); */
 }
 /* @media screen and (max-width: 768px) {
   .login_component {
@@ -28,13 +40,18 @@ background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, r
   }
 } */
 
+.nav_container {
+  padding: 0 0 1rem 0;
+}
+
 .container_register_login {
   overflow: auto;
   background-color: var(--secondary-color);
   height: 100%;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: 2rem auto;
+  padding: 1rem auto;
   align-items: center;
   border: 1px solid var(--secondary-color);
   border-radius: 5px;
@@ -98,7 +115,7 @@ background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, r
   cursor: pointer;
 }
 
-.container_icons{
+.container_icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,7 +126,6 @@ background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, r
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .h1_register {
@@ -117,28 +133,32 @@ background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, r
   margin-top: 0;
 }
 
-
-
 /* Estilos del componente de registro */
 
-
-.register_container{
+.register_container {
   color: white;
-  background: rgb(62,62,62);
-  background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
+  background: rgb(62, 62, 62);
+  background: linear-gradient(
+    128deg,
+    rgba(62, 62, 62, 1) 0%,
+    rgba(253, 29, 29, 1) 0%,
+    rgba(252, 176, 69, 1) 100%
+  );
   min-height: 102vh;
-
 }
 
-.container_register{
-  background-color: rgba(255, 255, 255, 0.5);
+.container_register {
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  background: rgba(255, 255, 255, 0.5);
+  /* filter: blur(1px); */
+  backdrop-filter: saturate(180%) blur(10px);
   width: 20rem;
   margin: 0 auto;
   border-radius: 10px;
   padding: 1rem 0;
 }
 
-.container_redirect_login{
+.container_redirect_login {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,11 +166,16 @@ background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, r
   flex-direction: column;
 }
 
-.container_footer_register{
+.container_footer_register {
   position: static;
 }
 
-/* FORMULARIOS */
+.container_login_footer {
+  position: static;
+  bottom: 0;
+}
+
+/* *FORMULARIOS */
 
 /* Estilos de el formulario de inicio de sesión */
 
@@ -158,7 +183,10 @@ background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, r
   /* color: white; */
   color: black;
   overflow: auto;
-  background-color: rgba(255, 255, 255, 0.5);
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  background: rgba(255, 255, 255, 0.4);
+  /* filter: blur(1px); */
+  backdrop-filter: saturate(180%) blur(10px);
   width: 50vh;
   height: 100%;
   display: flex;
@@ -167,6 +195,19 @@ background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, r
   align-items: center;
   border: 1px solid #ff7b00c9;
   border-radius: 7px;
+}
+
+@media screen and (max-width: 767px) {
+  .formLogin_container {
+    /* margin: 0 0; */
+    width: 80%;
+  }
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .formLogin_container {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
 }
 
 .inputs {
@@ -207,16 +248,14 @@ background: linear-gradient(128deg, rgba(62,62,62,1) 0%, rgba(253,29,29,1) 0%, r
   margin: 0 auto 1.8rem auto;
 }
 
-.container_register_login{
+.container_register_login {
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1;
   width: 30rem;
-
 }
 
-
-.FacebookIcon{
-  filter: grayscale(100%);
+.FacebookIcon {
+  filter: grayscale(100%) blur(1px);
 }
