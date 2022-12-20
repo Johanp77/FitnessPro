@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Login from '../components/auth/Login';
 import Register from '../components/auth/Register';
+import Loading from '../components/global/Loading';
 import Index from '../components/landing-page/Index';
 import ProductDetail from '../components/Store/ProductDetail';
 import Store from '../components/Store/Store';
@@ -40,7 +41,8 @@ const AppRouters = () => {
 
   if (checking) {
     return (
-      <h1>Procesando información...</h1>
+      // <h1>Procesando información...</h1>
+      <Loading />
     )
   }
 
