@@ -6,6 +6,7 @@ import styles from './AuthStyles.module.css';
 import { TextField } from '@mui/material'
 import { Link } from 'react-router-dom';
 import Footer from '../global/Footer';
+import AppAppBar from '../global/AppBar';
 
 
 const Register = () => {
@@ -28,7 +29,10 @@ const Register = () => {
     rest()
   }
   return (
-    <div>
+    <div className={styles.inyected_register_container}>
+      <div className={styles.nav_container}>
+        <AppAppBar />
+      </div>
       <div className={styles.register_container} >
         <h1 className={styles.h1_register}>Formulario de registro</h1>
         <div className={styles.container_register}>
@@ -88,8 +92,8 @@ const Register = () => {
         </div>
       </div>
       <div className={styles.container_footer_register}>
-          <Footer />
-        </div>
+        <Footer />
+      </div>
     </div>
   )
 }

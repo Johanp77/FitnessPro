@@ -37,6 +37,7 @@ export const addElement = (product, idProduct) => {
             id: product.id,
             name: product.name,
             price: product.price,
+            quantity: 0
         }
         // console.log(newProductObject);
         newProduct.push(newProductObject)
