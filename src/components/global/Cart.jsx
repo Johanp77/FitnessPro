@@ -61,15 +61,23 @@ const Cart = () => {
         minWidth="s"
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
+        sx={{ typography: '', fontFamily: 'Montserrat, sans-serif' }}
       >
-        <DialogTitle id="scroll-dialog-title">Carrito de compras</DialogTitle>
-        <DialogContent dividers={scroll === 'paper'}>
+        <DialogTitle
+          sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }}
+
+          id="scroll-dialog-title">Carrito de compras</DialogTitle>
+        <DialogContent dividers={scroll === 'paper'}
+          sx={{ typography: '', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }}
+
+        >
           <DialogContentText
             id="scroll-dialog-description"
             ref={descriptionElementRef}
             tabIndex={-1}
-          >
+            sx={{ typography: '', fontFamily: 'Arial', color: 'black' }}
 
+          >
 
             {/* <Box sx={style}> */}
             {/* <Typography id="modal-modal-title" variant="h6" component="h2">
@@ -83,35 +91,47 @@ const Cart = () => {
                   :
                   <div className={styles.grid_container}>
                     <div>
-                      <p>Producto(s)</p>
+                      <p className={styles.store_main_title}><strong>Producto(s)</strong></p>
                       {newProduct.map((newProduct2, index45) => {
                         return (
-                          <div key={newProduct2.id}>
-                            <p>{newProduct2.name}</p>
-                            <p>{newProduct2.price}</p>
+                          <div className={styles.grid_container_map} key={newProduct2.id}>
                             <div>
-                              <button onClick={() => { setCount(count + 1) }}>+</button>
-                              <p>{count}</p>
-                              <button onClick={() => { setCount(count - 1) }}>-</button>
+                              <p>{newProduct2.name}</p>
+                              <p>{newProduct2.price}</p>
                             </div>
-                            <DeleteForeverIcon />
+                            <div className={styles.buttons}>
+                              <div>
+                                <button className={styles.product_button} onClick={() => { setCount(count + 1) }}>+</button>
+                                <p>{count}</p>
+                                <button className={styles.product_button} onClick={() => { setCount(count - 1) }}>-</button>
+                              </div>
+                              <div>
+                                <DeleteForeverIcon sx={{ cursor: 'pointer' }} color='secondary' />
+                              </div>
+                            </div>
+
                           </div>
                         )
                       })
                       }
                     </div>
-                    <div>
-                      <p>Cantidad</p>
+                    <div className={styles.cantidad}>
+                      <p className={styles.store_main_title}><strong>Cantidad</strong></p>
                     </div>
                   </div>
               }
-              <button
-                onClick={() => (deleteAllElements(), handleClose())}
-                onClose={handleClose}
-              >
-                Vaciar carrito</button>
-                <button onClick={() =>  handleClose()}>Cerrar</button>
+              <div className={styles.buttons_container}>
+                <button
+                  className={styles.dialog_buttons}
+                  onClick={() => (deleteAllElements(), handleClose())}
+                  onClose={handleClose}
+                >
+                  Vaciar carrito</button>
+                <button
+                  className={styles.dialog_buttons}
+                  onClick={() => handleClose()}>Cerrar</button>
 
+              </div>
             </div>
             {/* </Box> */}
           </DialogContentText>
