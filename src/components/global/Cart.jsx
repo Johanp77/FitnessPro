@@ -1,8 +1,8 @@
 import React from 'react'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useDispatch } from 'react-redux';
-import { Box, Button, Dialog, DialogContent, DialogContentText, DialogTitle, Popover, Typography } from '@mui/material';
-import { deleteAllElements } from '../../redux/actions/storeActions';
+import { Box, Button, Dialog, DialogContent, DialogContentText, DialogTitle, Popover, Tooltip, Typography } from '@mui/material';
+import { deleteAllElements, deleteProduct } from '../../redux/actions/storeActions';
 import Modal from '@mui/material/Modal';
 import styles from '../styles/cart.module.css'
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
@@ -24,7 +24,7 @@ const style = {
 const Cart = () => {
 
   const [open, setOpen] = React.useState(false);
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = React.useState(1);
   const [scroll, setScroll] = React.useState('paper');
   const handleClickOpen = (scrollType) => () => {
     setOpen(true);
@@ -52,13 +52,13 @@ const Cart = () => {
 
   return (
     <div>
-      <ShoppingCartIcon sx={{ color: 'white', ml: '3' }} variant="contained" onClick={handleOpen} />
-
+      <Tooltip title="Carrito de compras">
+        <ShoppingCartIcon sx={{ color: 'white', ml: '3', cursor: 'pointer' }} variant="contained" onClick={handleOpen} />
+      </Tooltip>
       <Dialog
         open={open}
         onClose={handleClose}
         scroll={scroll}
-        minWidth="s"
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
         sx={{ typography: '', fontFamily: 'Montserrat, sans-serif' }}
@@ -76,16 +76,10 @@ const Cart = () => {
             ref={descriptionElementRef}
             tabIndex={-1}
             sx={{ typography: '', fontFamily: 'Arial', color: 'black' }}
-
           >
 
-            {/* <Box sx={style}> */}
-            {/* <Typography id="modal-modal-title" variant="h6" component="h2">
-            Carrito de compras
-          </Typography> */}
             <div>
               {
-
                 newProduct == null || newProduct.length === 0 ?
                   <h2>No tienes productos en el carrito </h2>
                   :
@@ -106,7 +100,9 @@ const Cart = () => {
                                 <button className={styles.product_button} onClick={() => { setCount(count - 1) }}>-</button>
                               </div>
                               <div>
-                                <DeleteForeverIcon sx={{ cursor: 'pointer' }} color='secondary' />
+                                <Tooltip title="Elimina este producto del carrito">
+                                  <DeleteForeverIcon sx={{ cursor: 'pointer' }} color='secondary' onClick={() => { deleteProduct(newProduct2.id) }} />
+                                </Tooltip>
                               </div>
                             </div>
 
@@ -133,7 +129,6 @@ const Cart = () => {
 
               </div>
             </div>
-            {/* </Box> */}
           </DialogContentText>
         </DialogContent>
       </Dialog>
