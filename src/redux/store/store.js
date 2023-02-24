@@ -1,5 +1,6 @@
 import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import thunk from "redux-thunk";
+import { readAllElements } from "../actions/storeActions";
 import { authReducers } from "../reducers/authReducers";
 import { firebaseReducers } from "../reducers/firebaseReducers";
 import { storeReducers } from "../reducers/storeReducers";

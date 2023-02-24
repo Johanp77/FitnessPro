@@ -2,7 +2,10 @@ import React from 'react'
 
 const UserDetails = () => {
   return (
-    <div>UserDetails(Componente en construcción)</div>
+    <div>
+      <p>UserDetails(Componente en construcción)</p>
+
+    </div>
   )
 }
 

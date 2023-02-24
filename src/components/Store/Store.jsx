@@ -58,7 +58,7 @@ const handleButtonClick = () => {
       {/* <Slider2 /> */}
       <div id="alert1">
         {/* <button onClick={() => <AlertWarningAddToCart handleClick={true} />}> hola</button> */}
-        <button onClick={handleButtonClick}> hola</button>
+        {/* <button onClick={handleButtonClick}> hola</button> */}
         {
           buttonClicked ? <AlertSucessfullAddToCart handleClick={true} /> : null
         }

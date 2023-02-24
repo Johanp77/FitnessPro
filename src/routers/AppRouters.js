@@ -9,6 +9,8 @@ import Index from '../components/landing-page/Index';
 import ProductDetail from '../components/Store/ProductDetail';
 import Store from '../components/Store/Store';
 import { authStatusChanger } from '../redux/actions/authActions';
+import { readAllElements } from '../redux/actions/storeActions';
+import { store } from '../redux/store/store';
 // import Home from '../components/Home';
 // import Register from '../components/auth/Register';
 import DashboardRouters from './DashboardRouters';
@@ -27,6 +29,11 @@ const AppRouters = () => {
 
   useEffect(() => {
     const auth = getAuth()
+
+    store.subscribe(() => {
+      readAllElements()
+      // persist your state
+    })
     onAuthStateChanged(auth, (user) => {
       if (user?.uid) {
         setIsLoggedIn(true)

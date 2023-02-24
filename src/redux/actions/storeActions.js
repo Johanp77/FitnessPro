@@ -1,15 +1,47 @@
 import { Alert } from "@mui/material";
 import React from "react";
-import { useSelector, useStore } from "react-redux";
+import { ReactReduxContext, useSelector, useStore } from "react-redux";
 import { AlertSucessfullAddToCart } from "../../components/Alerts";
 import { storeTypes } from "../types/storeTypes";
 import ReactDOM from 'react-dom/client';
+import { store } from "../store/store";
 
 
 
 let newProduct = []
 
 console.log(newProduct)
+
+// TODO: Manage the global store state here
+export const readAllElements = () => {
+
+const reduxState = store.getState();
+
+
+    if (localStorage.getItem('dataCarrito') === null) {
+        newProduct = JSON.parse(localStorage.setItem('dataCarrito', JSON.stringify(newProduct)))
+        console.log("nothing to see here");
+    }
+    else {
+        newProduct = JSON.parse(localStorage.getItem('dataCarrito'))
+        asyncReadAllElements(newProduct)
+        console.log("we have an else here")
+    }
+
+
+
+    // return (dispatch) => {
+    //     // dispatch(asyncReadAllElements())
+    // }
+}
+
+export const asyncReadAllElements = (ProductsLocalStorage) => {
+    return {
+        type: storeTypes.readAllElements,
+        payload: ProductsLocalStorage
+    }
+}
+
 
 export const addElement = (product, idProduct) => {
 
@@ -23,6 +55,7 @@ export const addElement = (product, idProduct) => {
     }
     else {
         newProduct = JSON.parse(localStorage.getItem('dataCarrito'))
+        asyncReadAllElements(newProduct)
         console.log("we have an else here")
     }
 
@@ -37,13 +70,14 @@ export const addElement = (product, idProduct) => {
             id: product.id,
             name: product.name,
             price: product.price,
+            quantity: 1
         }
         // console.log(newProductObject);
         newProduct.push(newProductObject)
         // console.log(newProduct);
 
         if (newProductObject) {
-        // console.log(newProductObject);
+            // console.log(newProductObject);
 
             localStorage.setItem('dataCarrito', JSON.stringify(newProduct))
             // const root = ReactDOM.createRoot(
@@ -66,11 +100,9 @@ export const asyncAddElement = (newProduct) => {
 
 }
 
-export const readAllElements = () => {
-    return (dispatch) => {
-        // dispatch(asyncReadAllElements())
-    }
-}
+
+
+
 
 export const deleteAllElements = () => {
     // localStorage.removeItem('dataCarrito')
@@ -87,3 +119,12 @@ export const asyncDeleteElement = (id) => {
     }
 }
 
+export const deleteProduct = (id) => {
+
+    // console.log(reduxState)
+
+    // console.log(reduxState.authReducers)
+
+
+
+}

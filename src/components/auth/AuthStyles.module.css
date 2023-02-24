@@ -135,8 +135,7 @@
 
 /* Estilos del componente de registro */
 
-.register_container {
-  color: white;
+.inyected_register_container{
   background: rgb(62, 62, 62);
   background: linear-gradient(
     128deg,
@@ -144,6 +143,11 @@
     rgba(253, 29, 29, 1) 0%,
     rgba(252, 176, 69, 1) 100%
   );
+}
+
+.register_container {
+  color: white;
+
   min-height: 102vh;
 }
 

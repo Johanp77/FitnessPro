@@ -17,6 +17,16 @@ const theme = createTheme({
       main: '#f55139',
     },
   },
+  typography: {
+    fontFamily: [
+      '"Monserrat"',
+      'sans-serif',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+    ]
+  }
 });
 
 
